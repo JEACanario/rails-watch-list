@@ -1,5 +1,6 @@
 class Movie < ApplicationRecord
-  has_many: bookmark
-  has_many: list :through bookmark
+  has_many :bookmarks
+
+  has_many :lists, :uniq through: :bookmarks
   validates :title, :overview, uniqueness: true
 end
