@@ -4,7 +4,10 @@ ruby "3.3.5"
 
 gem "faker"
 
+gem "rest-client"
+
 gem "hotwire-livereload"
+
 
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"

@@ -98,6 +98,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
+    domain_name (0.6.20240107)
     drb (2.2.1)
     erubi (1.13.0)
     execjs (2.10.0)
@@ -117,6 +118,9 @@ GEM
       actioncable (>= 6.0.0)
       listen (>= 3.0.0)
       railties (>= 6.0.0)
+    http-accept (1.7.0)
+    http-cookie (1.0.7)
+      domain_name (~> 0.5)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.3)
@@ -143,6 +147,10 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    mime-types (3.6.0)
+      logger
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2024.1105)
     mini_mime (1.1.5)
     minitest (5.25.1)
     msgpack (1.7.5)
@@ -156,6 +164,7 @@ GEM
       timeout
     net-smtp (0.5.0)
       net-protocol
+    netrc (0.11.0)
     nio4r (2.7.4)
     nokogiri (1.16.7-aarch64-linux)
       racc (~> 1.4)
@@ -228,6 +237,11 @@ GEM
       connection_pool
     reline (0.5.11)
       io-console (~> 0.5)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rspec-core (3.13.2)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
@@ -308,6 +322,7 @@ DEPENDENCIES
   rails (~> 7.1.5)
   rails-controller-testing
   redis (>= 4.0.1)
+  rest-client
   rspec-rails
   sassc-rails
   simple_form

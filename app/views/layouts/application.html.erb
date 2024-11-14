@@ -12,6 +12,14 @@
   </head>
 
   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <%= link_to "Homepage", lists_path, class: "btn btn-primary"  %>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <%= link_to "Create", new_list_path %>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
