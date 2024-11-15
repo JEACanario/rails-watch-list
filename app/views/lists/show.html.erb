@@ -1,2 +1,19 @@
 <h1><%= @list.name %></h1>
+
+<div class="card-deck d-flex">
+  <% @list.movies.each do |m| %>
+  <div class="card", style="width: 18rem;">
+    <%= image_tag m.poster_url,  class: "card-img-top" %>
+    <% bookmark = Bookmark.find_by(list:@list, movie:m )%>
+    <div class="card-body">
+      <h5 class="card-title"><%= m.title %></h5>
+      <p class="card-text"><%= m.overview %></p>
+      <p class="card-text"><small class="text-muted"><%=m.rating%></small></p>
+      <p class="card-text"><small class="text-muted"> <%="Personal comment: #{bookmark.comment}"%> </small></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
 <%= link_to "Add Movies", new_list_bookmark_path(@list),  class:"btn btn-secondary"%>

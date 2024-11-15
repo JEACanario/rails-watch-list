@@ -18,6 +18,7 @@ gem "sassc-rails"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 
 gem "dotenv-rails"
+gem "cloudinary"
 
 gem "rails", "~> 7.1.5"
 

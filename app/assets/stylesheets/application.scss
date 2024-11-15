@@ -10,3 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.card-img-top {
+  width: 100%;
+  height:100%;
+  object-fit: fill;
+}
